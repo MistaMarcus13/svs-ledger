@@ -56,12 +56,12 @@ const db = getFirestore(app);
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'svs-tactical-ledger';
 
 const DEFAULT_PRESETS = [
-  "Pistol", "Combat Pistol", "AP Pistol", "Heavy Pistol", "SP45",
-  "Micro SMG", "SMG", "Combat PDW", "Gusenberg", "Tactical SMG",
-  "Assault Rifle", "Carbine Rifle", "Special Carbine", "Tactical Rifle",
+  "Pistol", "Combat Pistol", "AP Pistol", "Heavy Pistol", "SP45", "Pistol .50", "Taser"
+  "Micro SMG", "SMG", "Combat PDW", "Gusenberg", "Tactical SMG", "Machine Pistol", "Mini SMG", 
+  "Assault Rifle", "Carbine Rifle", "Special Carbine", "Tactical Rifle", "Heavy Rifle"
   "Combat MG", "Pump Shotgun",
-  "9mm Ammo", "5.56 Ammo", "7.62 Ammo", "Shotgun Shells",
-  "Armor Plate"
+  "9mm Ammo", "5.56 Ammo", "7.62 Ammo", "Shotgun Shells", "Taser cartridge",
+  "Med Armor", "Joints", 
 ];
 
 const App = () => {
