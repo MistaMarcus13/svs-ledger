@@ -186,6 +186,7 @@ const App = () => {
     const grandTotal = pendingItems.reduce((acc, item) => acc + item.total, 0);
     const transId = Date.now().toString();
     const newTransaction = {
+      id: transId,
       timestamp: new Date().toLocaleString(),
       buyerName: buyerName || 'SVS',
       notes: orderNotes,
@@ -198,6 +199,8 @@ const App = () => {
       setBuyerName('');
       setOrderNotes('');
       showStatus("Manifest Logged");
+      // Automatically generate and show the visual preview
+      generateManifestVisual(newTransaction);
     } catch (err) {
       showStatus("Secure write failed", "error");
     }
